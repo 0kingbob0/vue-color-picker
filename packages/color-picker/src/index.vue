@@ -200,10 +200,11 @@ const gradient = (startColor: string, endColor: string, step: number) => {
         </ul>
         <h3 @click="triggerHtml5Color">更多颜色...</h3>
         <!-- 用以激活HTML5颜色面板 -->
+         <!-- input可以正确触发 -->
         <input type="color"
           ref="html5ColorEl"
           v-model="html5Color"
-          @change="updataValue(html5Color)">
+          @input="updataValue(html5Color)">
       </div>
     </div>
   </div>
